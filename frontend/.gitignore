@@ -1,0 +1,55 @@
+# -------------------------------------------------------------------
+# 1. Dependency and Build Files (Vite, React, Node)
+# -------------------------------------------------------------------
+
+# Node modules directory (large dependencies)
+/node_modules
+
+# Vite build output directory
+/dist
+/out
+/build
+.vite/ # Vite cache directory
+
+# TypeScript/JavaScript caches
+.eslintcache
+.stylelintcache
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Cypress/Playwright output (if you use E2E testing)
+cypress/videos
+cypress/screenshots
+playwright-report/
+
+# -------------------------------------------------------------------
+# 2. Environment and Configuration
+# -------------------------------------------------------------------
+
+# Local environment variables and secrets (NEVER commit these)
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# -------------------------------------------------------------------
+# 3. WebStorm / JetBrains IDE Specific Files
+# -------------------------------------------------------------------
+# Configuration and cache files created by WebStorm/JetBrains IDEs
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# -------------------------------------------------------------------
+# 4. macOS Specific Files
+# -------------------------------------------------------------------
+# Finder and operating system metadata
+.DS_Store
+**/.DS_Store

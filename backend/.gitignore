@@ -1,0 +1,52 @@
+# -------------------------------------------------------------------
+# 1. Build and Compilation Artifacts (General .NET)
+# -------------------------------------------------------------------
+
+# Compiled output directories
+[Bb]in/
+[Oo]bj/
+
+# Debug and Release directories
+[Dd]ebug/
+[Rr]elease/
+
+# Test results and temporary files
+TestResults/
+.trx
+*.log
+temp/
+
+# -------------------------------------------------------------------
+# 2. Dependency Caches and Packages
+# -------------------------------------------------------------------
+
+# NuGet packages and caches
+packages/
+*.nupkg
+nuget.cache
+
+# Publish directories (used for deployment)
+**/publish/
+
+# -------------------------------------------------------------------
+# 3. Rider / JetBrains IDE Specific Files
+# -------------------------------------------------------------------
+# Configuration and cache files created by Rider/JetBrains IDEs
+# Located at the solution level (.idea folder)
+.idea/
+*.iws
+*.iml
+*.ipr
+/rdt/
+
+# Solution User Options File (Visual Studio specific, but good to include)
+*.suo
+*.user
+.vs/
+
+# -------------------------------------------------------------------
+# 4. macOS Specific Files
+# -------------------------------------------------------------------
+# Finder and operating system metadata
+.DS_Store
+**/.DS_Store

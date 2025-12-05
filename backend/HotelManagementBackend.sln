@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBooking.Application", "RoomBooking.Application\RoomBooking.Application.csproj", "{8C31F88E-BC6B-4591-9695-47E7F0391CD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBooking.Infrastructure", "RoomBooking.Infrastructure\RoomBooking.Infrastructure.csproj", "{FEEFBE12-BB95-46B3-80EE-591CB8C8BCBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBooking.API", "RoomBooking.API\RoomBooking.API.csproj", "{F9964E5C-205D-4F57-861A-EF5DAFC0FD29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBooking.Domain", "RoomBooking.Domain\RoomBooking.Domain.csproj", "{BE29F1CA-BF38-4182-8AD3-7AC6D9664AF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBooking.Tests.Unit", "RoomBooking.Tests.Unit\RoomBooking.Tests.Unit.csproj", "{7E3F6746-F817-447C-A4F0-9C099187179A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBooking.IntegrationTests", "RoomBooking.IntegrationTests\RoomBooking.IntegrationTests.csproj", "{41322B90-314F-4D90-9BF6-822A8B2EB208}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C31F88E-BC6B-4591-9695-47E7F0391CD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C31F88E-BC6B-4591-9695-47E7F0391CD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C31F88E-BC6B-4591-9695-47E7F0391CD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C31F88E-BC6B-4591-9695-47E7F0391CD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEEFBE12-BB95-46B3-80EE-591CB8C8BCBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEEFBE12-BB95-46B3-80EE-591CB8C8BCBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEEFBE12-BB95-46B3-80EE-591CB8C8BCBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEEFBE12-BB95-46B3-80EE-591CB8C8BCBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9964E5C-205D-4F57-861A-EF5DAFC0FD29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9964E5C-205D-4F57-861A-EF5DAFC0FD29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9964E5C-205D-4F57-861A-EF5DAFC0FD29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9964E5C-205D-4F57-861A-EF5DAFC0FD29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE29F1CA-BF38-4182-8AD3-7AC6D9664AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE29F1CA-BF38-4182-8AD3-7AC6D9664AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE29F1CA-BF38-4182-8AD3-7AC6D9664AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE29F1CA-BF38-4182-8AD3-7AC6D9664AF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E3F6746-F817-447C-A4F0-9C099187179A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E3F6746-F817-447C-A4F0-9C099187179A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E3F6746-F817-447C-A4F0-9C099187179A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E3F6746-F817-447C-A4F0-9C099187179A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41322B90-314F-4D90-9BF6-822A8B2EB208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41322B90-314F-4D90-9BF6-822A8B2EB208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41322B90-314F-4D90-9BF6-822A8B2EB208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41322B90-314F-4D90-9BF6-822A8B2EB208}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
