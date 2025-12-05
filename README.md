@@ -120,16 +120,18 @@ The frontend code is located in the **`frontend/`** directory. It consumes data 
 
 ---
 
-## 🤝 Contributing
+## 🧩 Architecture Overview Frontend
 
-We welcome contributions! Please follow these steps:
+### **API Layer (`hotelmanagementfrontend`)**
+**Role:** Acts as the entry point for browsing the application. Handles routing, page navigation, layout composition, and manages how users access different features of the system.
 
-1.  Fork the repository.
-2.  Create your feature branch (`git checkout -b feature/new-booking-flow`).
-3.  Commit your changes (`git commit -m 'feat: Implemented new guest checkout process'`).
-4.  Push to the branch (`git push origin feature/new-booking-flow`).
-5.  Open a Pull Request.
+**Contains:**
+- Routing setup (e.g., navigating to Book Room, Get Booking, etc.)
+- Global error boundaries and fallback UI
+- Top-level components like App.tsx and main.tsx
+
+---
 
 ## 📄 License
 
-Distributed under the **MIT License**.
+Distributed under the **Interview project**.
