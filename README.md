@@ -1,8 +1,8 @@
-# 🏨 Hotel Management System
+# Hotel Management System
 
-## ✨ Overview
+## Overview
 
-This repository contains a full-stack hotel management application designed to handle room booking and checkout. The project follows a monorepo structure, separating the application logic into two main components: a powerful backend API and a modern frontend single-page application.
+This repository contains hotel management application designed to handle room booking and checkout.
 
 | **Component** | **Technology Stack** | 
 | :--- | :--- |
@@ -11,7 +11,7 @@ This repository contains a full-stack hotel management application designed to h
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these instructions to clone the repository and get both the backend and frontend up and running on your local machine.
 
@@ -73,7 +73,7 @@ The frontend code is located in the **`frontend/`** directory. It consumes data 
     ```
     The React application will usually open in your browser at `http://localhost:3000`. **Ensure your backend API is already running** for the application to load data correctly.
 
-## 🧩 Architecture Overview Backend
+## Architecture Overview Backend
 
 ### **API Layer (`RoomBooking.API`)**
 **Role:** Entry point for all external requests. Handles routing, request/response processing, Global exceptions and forwards calls to the Application Layer.
@@ -85,7 +85,7 @@ The frontend code is located in the **`frontend/`** directory. It consumes data 
 ---
 
 ### **Application Layer (`RoomBooking.Application`)**
-**Role:** Coordinates business workflows and enforces application rules. Defines all use cases of the system.
+**Role:** Complete business logic.
 
 **Contains:**
 - Booking Service (availability checks, pricing logic, status transitions)
@@ -96,7 +96,7 @@ The frontend code is located in the **`frontend/`** directory. It consumes data 
 ---
 
 ### **Domain Layer (`RoomBooking.Domain`)**
-**Role:** The core of the system — independent of all external layers. Defines constraints.
+**Role:** All the entities (Business classes).
 
 **Contains:**
 - Entities 
@@ -105,33 +105,27 @@ The frontend code is located in the **`frontend/`** directory. It consumes data 
 ---
 
 ### **Infrastructure Layer (`RoomBooking.Infrastructure`)**
-**Role:** In memory database setup.
+**Role:** In memory database setup. Room price and data storage in a List.
 
 **Contains:**
-- Repository implementations (currently in-memory)
-- Data persistence logic
+- InMemory repository
 
 ---
 
-## 🧪 Testing
+## Testing
 
-- **Integration Tests** validate end-to-end booking workflows.
-- **Unit Tests** ensure correctness across Application and Infrastructure layers.
+- **Integration Tests** validate end-to-end booking workflows to book a room.
+- **Unit Tests**  Application and Infrastructure layers unit test cases.
 
 ---
 
-## 🧩 Architecture Overview Frontend
+##  Architecture Overview Frontend
 
 ### **API Layer (`hotelmanagementfrontend`)**
-**Role:** Acts as the entry point for browsing the application. Handles routing, page navigation, layout composition, and manages how users access different features of the system.
+**Role:** Browsing the application. Handles routing, page navigation,and manages how users access different features of the system.
 
 **Contains:**
-- Routing setup (e.g., navigating to Book Room, Get Booking, etc.)
-- Global error boundaries and fallback UI
-- Top-level components like App.tsx and main.tsx
+- Routing setup (e.g., navigating to Book Room, Get Booking)
+- BookRoom and GetBooking UI
 
 ---
-
-## 📄 License
-
-Distributed under the **Interview project**.

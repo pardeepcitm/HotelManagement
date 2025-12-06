@@ -4,16 +4,16 @@ namespace RoomBooking.Application.Exceptions
 {
     public class RoomUnavailableException : Exception
     {
-        private const string DefaultMessageTemplate = "Room {0} type is not available.";
+        private const string RoomUnavailableError = "Room {0} type is not available.";
         
         public RoomUnavailableException(RoomTypes roomType)
-            : base(string.Format(DefaultMessageTemplate, roomType)) 
+            : base(string.Format(RoomUnavailableError, roomType)) 
         {
             this.RoomType = roomType;
         }
         
         public RoomUnavailableException(RoomTypes roomType, Exception innerException)
-            : base(string.Format(DefaultMessageTemplate, roomType), innerException)
+            : base(string.Format(RoomUnavailableError, roomType), innerException)
         {
             this.RoomType = roomType;
         }

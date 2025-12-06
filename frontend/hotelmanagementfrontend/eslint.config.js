@@ -35,18 +35,11 @@ export default [
     },
 
     rules: {
-      // TS rules
       '@typescript-eslint/no-unused-vars': 'warn',
-
-      // React rules
       'react/jsx-uses-react': 'off',
       'react/react-in-jsx-scope': 'off',
-
-      // Hooks rules
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
-
-      // Prettier integration
       'prettier/prettier': 'error',
     },
   },

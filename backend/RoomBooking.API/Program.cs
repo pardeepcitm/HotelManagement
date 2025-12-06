@@ -30,8 +30,6 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-
-
 app.UseCors(MyAllowSpecificOrigins);
 
 app.UseExceptionHandler();

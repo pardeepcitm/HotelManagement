@@ -10,7 +10,6 @@ const GetBooking: React.FC = () => {
   const handleCheckout = async (bookingNumber: string) => {
     try {
       await checkoutRoom(bookingNumber)
-
       setBookings((prev) =>
         prev.map((b) =>
           b.bookingNumber === bookingNumber ? { ...b, isCheckedOut: true } : b,
@@ -23,7 +22,6 @@ const GetBooking: React.FC = () => {
       alert(message)
     }
   }
-
   useEffect(() => {
     const loadBookings = async () => {
       setLoading(true)
@@ -37,13 +35,11 @@ const GetBooking: React.FC = () => {
         setLoading(false)
       }
     }
-
     loadBookings()
   }, [])
 
   if (loading) return <div>Loading bookings...</div>
   if (error) return <div className="text-red-600">Error: {error}</div>
-
   return (
     <div className="p-4">
       <h2 className="mb-4 text-xl font-bold">Current Bookings</h2>
@@ -84,7 +80,6 @@ const GetBooking: React.FC = () => {
                   {booking.isCheckedOut ? 'Checked Out' : 'Active'}
                 </p>
               </div>
-
               {!booking.isCheckedOut && (
                 <button
                   onClick={() => handleCheckout(booking.bookingNumber)}
@@ -99,5 +94,4 @@ const GetBooking: React.FC = () => {
     </div>
   )
 }
-
 export default GetBooking

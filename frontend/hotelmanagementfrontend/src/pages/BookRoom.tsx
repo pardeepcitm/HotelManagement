@@ -46,7 +46,6 @@ const BookRoom: React.FC = () => {
   return (
     <div className="mx-auto max-w-md rounded-md bg-white p-6 shadow">
       <h1 className="mb-6 text-center text-2xl font-bold">Book a Room</h1>
-
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <div>
           <label className="mb-1 block font-medium">Guest Email</label>
@@ -59,8 +58,6 @@ const BookRoom: React.FC = () => {
             className="w-full rounded border border-gray-300 px-3 py-2 focus:border-purple-500 focus:outline-none focus:ring"
           />
         </div>
-
-        {/* Check-In */}
         <div>
           <label className="mb-1 block font-medium">Check-In</label>
           <input
@@ -72,8 +69,6 @@ const BookRoom: React.FC = () => {
             className="w-full rounded border border-gray-300 px-3 py-2 focus:border-purple-500 focus:outline-none focus:ring"
           />
         </div>
-
-        {/* Check-Out */}
         <div>
           <label className="mb-1 block font-medium">Check-Out</label>
           <input
@@ -85,8 +80,6 @@ const BookRoom: React.FC = () => {
             className="w-full rounded border border-gray-300 px-3 py-2 focus:border-purple-500 focus:outline-none focus:ring"
           />
         </div>
-
-        {/* Room Type */}
         <div>
           <label className="mb-1 block font-medium">Room Type</label>
           <select
@@ -98,7 +91,6 @@ const BookRoom: React.FC = () => {
             <option value="Deluxe">Deluxe</option>
           </select>
         </div>
-
         <button
           type="submit"
           disabled={loading}
@@ -106,8 +98,6 @@ const BookRoom: React.FC = () => {
           {loading ? 'Booking...' : 'Book Room'}
         </button>
       </form>
-
-      {/* Display booking response */}
       {response && (
         <div className="mt-4 space-y-1 rounded bg-green-100 p-4 text-green-800">
           <p>
@@ -130,12 +120,10 @@ const BookRoom: React.FC = () => {
           </p>
         </div>
       )}
-
       {error && (
         <div className="mt-4 rounded bg-red-100 p-3 text-red-700">{error}</div>
       )}
     </div>
   )
 }
-
 export default BookRoom

@@ -13,7 +13,6 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
-        {/* Navbar */}
         <nav className="flex gap-4 bg-white px-6 py-4 shadow-md">
           <NavLink
             to="/"
@@ -30,8 +29,6 @@ const App: React.FC = () => {
             GetBooking
           </NavLink>
         </nav>
-
-        {/* Page content */}
         <main className="p-6">
           <Routes>
             <Route path="/" element={<BookRoom />} />
@@ -42,5 +39,4 @@ const App: React.FC = () => {
     </Router>
   )
 }
-
 export default App

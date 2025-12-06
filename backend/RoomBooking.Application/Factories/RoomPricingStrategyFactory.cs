@@ -2,8 +2,6 @@ using RoomBooking.Application.Entities;
 using RoomBooking.Domain.Pricing;
 
 namespace RoomBooking.Application.Factories;
-
-// In RoomBooking.Application/Factories
 public class RoomPricingStrategyFactory : IRoomPricingStrategyFactory
 {
     public IRoomPricingStrategy CreateStrategy(RoomTypes roomType)
