@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useMemo, useState } from 'react'
 import { BookingForm, BookingResponse } from '../types/interfaces'
 
 import { createRoomBooking } from './../apis/bookingService'
@@ -23,29 +23,42 @@ const BookRoom: React.FC = () => {
     setForm((prevForm) => ({ ...prevForm, [name]: value }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
-    setError(null)
-    setResponse(null)
+  const handleSubmit = useCallback(
+    async (e: React.FormEvent) => {
+      e.preventDefault()
+      setLoading(true)
+      setError(null)
+      setResponse(null)
 
-    try {
-      const data = await createRoomBooking(form)
-      setResponse(data)
-    } catch (err) {
-      setError(
-        err instanceof Error
-          ? err.message
-          : 'Something went wrong during booking.',
-      )
-    } finally {
-      setLoading(false)
-    }
-  }
+      try {
+        const data = await createRoomBooking(form)
+        setResponse(data)
+      } catch (err) {
+        setError(
+          err instanceof Error
+            ? err.message
+            : 'Something went wrong during booking.',
+        )
+      } finally {
+        setLoading(false)
+      }
+    },
+    [form],
+  )
+
+  const displayPrice = useMemo(() => {
+    let price = 0
+    if (form.roomType === 'Standard') price = 750
+    else price = 1000
+    return price
+  }, [form.roomType])
 
   return (
     <div className="mx-auto max-w-md rounded-md bg-white p-6 shadow">
       <h1 className="mb-6 text-center text-2xl font-bold">Book a Room</h1>
+      <h2 className="m-1 mb-6 text-xs text-red-600">
+        Price for one day {displayPrice ? displayPrice : 0}
+      </h2>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <div>
           <label className="mb-1 block font-medium">Guest Email</label>

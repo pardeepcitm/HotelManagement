@@ -114,14 +114,14 @@ The frontend code is located in the **`frontend/`** directory. It consumes data 
 
 ## Testing
 
-- **Integration Tests** validate end-to-end booking workflows to book a room.
+- **Integration Tests** Validate end-to-end booking workflows to book a room.
 - **Unit Tests**  Application and Infrastructure layers unit test cases.
 
 ---
 
 ##  Architecture Overview Frontend
 
-### **API Layer (`hotelmanagementfrontend`)**
+### **(`hotelmanagementfrontend`)**
 **Role:** Browsing the application. Handles routing, page navigation,and manages how users access different features of the system.
 
 **Contains:**

@@ -8,10 +8,14 @@ import {
 
 import BookRoom from './pages/BookRoom'
 import GetBooking from './pages/GetBooking'
+import HeaderBar from './pages/header/HeaderBar'
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <div>
+      <HeaderBar></HeaderBar>
+    </div>
+    /* <Router>
       <div className="min-h-screen bg-gray-50">
         <nav className="flex gap-4 bg-white px-6 py-4 shadow-md">
           <NavLink
@@ -36,7 +40,7 @@ const App: React.FC = () => {
           </Routes>
         </main>
       </div>
-    </Router>
+    </Router>*/
   )
 }
 export default App
