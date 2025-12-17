@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,6 +11,7 @@ import GetBooking from './pages/GetBooking'
 import HeaderBar from './pages/header/HeaderBar'
 
 const App: React.FC = () => {
+  const { t } = useTranslation()
   return (
     <div>
       <HeaderBar></HeaderBar>
@@ -43,4 +44,11 @@ const App: React.FC = () => {
     </Router>*/
   )
 }
-export default App
+
+export default function WrappedApp() {
+  return (
+    <Suspense fallback="...loading">
+      <App />
+    </Suspense>
+  )
+}
